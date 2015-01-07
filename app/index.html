@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" ng-app="adsApp">
+<head>
+  <meta charset="utf-8">  
+  <title>Ads Management</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/app.css">
+  <style>
+    [ng-cloak] {
+      display: none;
+    }
+  </style>    
+</head>
+<body ng-cloak>
+
+  <ng-view></ng-view>
+
+  <footer class="col-md-offset-2 col-md-8">
+    <p>&#169; 2014 by Software University Foundation, No Rights Reserved</p>
+  </footer>
+
+  <!-- Library scripts  -->
+  <script src="lib/jquery-1.11.2.js"></script>
+  <script src="lib/angular/angular.js"></script>  
+  <script src="lib/angular/angular-route.js"></script>
+  <script src="lib/angular/angular-resource.js"></script>
+  <script src="lib/angular/angular-local-storage.js"></script>
+  <script src="lib/bootstrap/bootstrap.js"></script>   
+  <!--  Application scripts -->
+  <script src="js/app.js"></script>  
+  <!--  Controllers -->
+  <script src="js/controllers/HomeController.js"></script>
+  <script src="js/controllers/LoginController.js"></script>
+  <script src="js/controllers/RegisterController.js"></script>
+  <script src="js/controllers/PublicAdsController.js"></script>
+  <script src="js/controllers/TownsController.js"></script>
+  <script src="js/controllers/CategoriesController.js"></script>
+  <!-- Directives -->
+  <script src="js/directives/public-ads.js"></script>
+  <script src="js/directives/towns.js"></script>
+  <script src="js/directives/categories.js"></script>
+  <!-- Services  -->
+  <script src="js/services/data/userData.js"></script>
+  <script src="js/services/authentication.js"></script>
+  <script src="js/services/data/adsData.js"></script>
+  <script src="js/services/data/townsData.js"></script>
+  <script src="js/services/data/categoriesData.js"></script>
+</body>
+</html>
