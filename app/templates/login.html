@@ -1,0 +1,25 @@
+<form class="form-horizontal col-md-offset-2 col-md-8">
+  <fieldset>
+    <legend><h2>Login</h2></legend>
+    <div class="form-group">
+      <label for="username" class="col-md-3 control-label">Username</label>
+      <div class="col-md-7">
+        <input type="text" class="form-control" id="username" placeholder="Enter Username" ng-model="user.username">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="pass" class="col-md-3 control-label">Password</label>
+      <div class="col-md-7">
+        <input type="password" class="form-control" id="pass" placeholder="Enter Password" ng-model="user.password">        
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <div class="col-md-offset-5">        
+        <button type="submit" class="btn btn-danger" ng-click="login(user)">Login</button>
+        <button class="btn btn-default">
+          <a href="/register">Register here</a></button>
+      </div>
+    </div>
+  </fieldset>
+</form>

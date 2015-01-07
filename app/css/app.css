@@ -1,0 +1,13 @@
+/* app css stylesheet */
+body {
+  margin: 15px;
+}
+ul {
+  list-style-type: none;
+}
+#public-ads {
+	text-align: center;
+}
+footer > p {
+  text-align: center;
+}

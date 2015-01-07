@@ -1,0 +1,19 @@
+<header>
+	<h1>Ads - {{ pageTitle }}</h1>
+</header>
+
+<div class="jumbotron">
+	<div class="row">
+		<div class="col-md-3">
+			<div ng-include="'templates/left-public-sidebar.html'" ng-if="!isLoggedIn"></div>	
+			<div ng-include="'templates/logged-in-sidebar.html'" ng-if="isLoggedIn"></div>
+		</div>
+		<div class="col-md-6">
+			<public-ads></public-ads>
+		</div>
+		<div class="col-md-3">
+			<categories></categories>
+			<towns></towns>
+		</div>
+	</div>
+</div>
