@@ -1,5 +1,5 @@
-app.controller('CategoriesController', ['$scope', 'categoriesData', 'filter', 
-	function($scope, categoriesData, filter){
+app.controller('CategoriesController', ['$scope', '$rootScope', 'categoriesData', 'filter', 
+	function($scope, $rootScope, categoriesData, filter){
 		categoriesData.getCategories()
 		.$promise
 		.then(function(data){
@@ -8,6 +8,7 @@ app.controller('CategoriesController', ['$scope', 'categoriesData', 'filter',
 
 		$scope.categoryClicked = function(category){
 			filter.filterByCategory(category);
+			$rootScope.$broadcast('categoryClicked', category);
 		}
 	}
 ]);
