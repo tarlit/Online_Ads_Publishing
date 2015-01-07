@@ -4,7 +4,7 @@
 	</div>
 	<div class="panel-body">
 		<ul class="list-group">
-			<li ng-repeat="town in towns">
+			<li ng-repeat="town in towns"  ng-click="townClicked(town)">
 				<a href="" class="list-group-item">{{ town.name }}</a>
 			</li>
 		</ul>
