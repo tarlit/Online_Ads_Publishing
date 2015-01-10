@@ -27,6 +27,16 @@ app.config(function ($routeProvider) {
         controller: 'UserPublishNewAdController'
     });
 
+    $routeProvider.when('/user/ads', {
+        templateUrl: 'templates/user/user-my-ads.html',
+        controller: 'UserGetAllAdsController'
+    });
+
+    $routeProvider.when('/user/ads/deactivate/:id', {
+        templateUrl: 'templates/user/user-my-ads.html',
+        controller: 'UserGetAllAdsController'
+    });
+
     $routeProvider.otherwise(
         { redirectTo: '/' }
     );

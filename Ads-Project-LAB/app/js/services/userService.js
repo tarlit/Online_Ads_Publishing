@@ -1,5 +1,6 @@
 'use strict';
 
+// userService will implement operations for logged in users
 app.factory('userService',
     function ($http, baseServiceUrl, authService) {
         return {
@@ -24,10 +25,28 @@ app.factory('userService',
             },
 
             deactivateAd: function (id, success, error) {
-                // TODO
+                var request = {
+                    method: 'PUT',
+                    url: baseServiceUrl + '/api/user/ads/deactivate/' + id,
+                    headers: authService.getAuthHeaders()
+                };
+                $http(request).success(success).error(error);
             },
 
             publishAgainAd: function (id, success, error) {
+                var request = {
+                    method: 'PUT',
+                    url: baseServiceUrl + '/api/user/ads/publishAgain/' + id,
+                    headers: authService.getAuthHeaders()
+                };
+                $http(request).success(success).error(error);
+            },
+
+            editAd: function (id, success, error) {
+                // TODO
+            },
+
+            deleteAd: function (id, success, error) {
                 // TODO
             }
         }
