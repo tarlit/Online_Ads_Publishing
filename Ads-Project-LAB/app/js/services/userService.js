@@ -42,12 +42,58 @@ app.factory('userService',
                 $http(request).success(success).error(error);
             },
 
+            getCurrentAd : function (id, success, error) {
+                var request = {
+                    method: 'GET',
+                    url: baseServiceUrl + '/api/user/ads/' + id,
+                    headers: authService.getAuthHeaders()
+                };
+                $http(request).success(success).error(error);
+            },
+
             editAd: function (id, success, error) {
-                // TODO
+                var request = {
+                    method: 'PUT',
+                    url: baseServiceUrl + '/api/user/ads/' + id,
+                    headers: authService.getAuthHeaders()
+                };
+                $http(request).success(success).error(error);
             },
 
             deleteAd: function (id, success, error) {
-                // TODO
+                var request = {
+                    method: 'DELETE',
+                    url: baseServiceUrl + '/api/user/ads/' + id,
+                    headers: authService.getAuthHeaders()
+                };
+                $http(request).success(success).error(error);
+            },
+
+            getUserProfile : function (success, error) {
+                var request = {
+                    method: 'GET',
+                    url: baseServiceUrl + '/api/user/profile',
+                    headers: authService.getAuthHeaders()
+                };
+                $http(request).success(success).error(error);
+            },
+
+            editUserProfile: function (success, error) {
+                var request = {
+                    method: 'PUT',
+                    url: baseServiceUrl + '/api/user/profile',
+                    headers: authService.getAuthHeaders()
+                };
+                $http(request).success(success).error(error);
+            },
+
+            changeUserPassword: function (success, error) {
+                var request = {
+                    method: 'PUT',
+                    url: baseServiceUrl + '/api/user/changePassword',
+                    headers: authService.getAuthHeaders()
+                };
+                $http(request).success(success).error(error);
             }
         }
     }

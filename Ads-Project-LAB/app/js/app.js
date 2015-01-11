@@ -22,19 +22,34 @@ app.config(function ($routeProvider) {
         controller: 'RegisterController'
     });
 
-    $routeProvider.when('/user/ads/publish', {
-        templateUrl: 'templates/user/publish-new-ad.html',
-        controller: 'UserPublishNewAdController'
-    });
-
     $routeProvider.when('/user/ads', {
         templateUrl: 'templates/user/user-my-ads.html',
         controller: 'UserGetAllAdsController'
     });
 
+    $routeProvider.when('/user/ads/publish', {
+        templateUrl: 'templates/user/publish-new-ad.html',
+        controller: 'UserPublishNewAdController'
+    });
+
     $routeProvider.when('/user/ads/deactivate/:id', {
         templateUrl: 'templates/user/user-my-ads.html',
         controller: 'UserGetAllAdsController'
+    });
+
+    $routeProvider.when('/admin/ads/publish', {
+        templateUrl: 'templates/admin/.html',
+        controller: 'Controller'
+    });
+
+    $routeProvider.when('/admin/ads', {
+        templateUrl: 'templates/.html',
+        controller: 'Controller'
+    });
+
+    $routeProvider.when('/admin/ads/approve/:id', {
+        templateUrl: 'templates/admin/.html',
+        controller: 'Controller'
     });
 
     $routeProvider.otherwise(

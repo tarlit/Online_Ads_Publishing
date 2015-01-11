@@ -1,5 +1,6 @@
 'use strict';
 
+// The LoginController is responsible for the "Login" screen
 app.controller('LoginController',
     function ($scope, $rootScope, $location, authService, notifyService) {
         $scope.login = function(userData) {

@@ -21,18 +21,18 @@ app.controller('UserGetAllAdsController',
 	  
 	  $scope.reloadUserAds();
 
-      $scope.deactivateAd = function(id) {
-          userService.deactivateAd(             
-              id,
-              function success(data) {
-                  $scope.ads = data;
-				  $scope.reloadUserAds();
-              },
-              function error(err) {
-                  notifyService.showError("Cannot load ads", err);
-              }
-          );
-      };      
+    $scope.deactivateAd = function(id) {
+        userService.deactivateAd(             
+            id,
+            function success(data) {
+                $scope.ads = data;
+			          $scope.reloadUserAds();
+            },
+            function error(err) {
+                notifyService.showError("Cannot load ads", err);
+            }
+        );
+    };      
 	  
 	  // This event is sent by RightSideBarController when the current category is changed
         $scope.$on("categorySelectionChanged", function(event, selectedCategoryId) {

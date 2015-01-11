@@ -1,4 +1,4 @@
-<!-- Navigation box for anonymous site visitors -->
+ <!-- Navigation box for anonymous site visitors -->
 <div ng-if="authService.isAnonymous()" class="box">
     <h2>Navigation</h2>
     <ul class="sidebar-menu">
@@ -27,11 +27,32 @@
     </ul>
 </div>
 
-<!-- Navigation box for logged in normal users when MyAds click 
-?? and loged in admins-->
+<!-- Navigation box for logged in normal users when MyAds click -->
 <div ng-if="authService.isNormalUser()" class="box">
-    // TODO
-    <h2>My Ads ?? Ads</h2>
+    <h2>My Ads</h2>
+    <ul class="sidebar-menu">
+        <li><a href="#/user/ads">All</a></li>
+        <li><a href="#/user/ads">Published</a></li>
+        <li><a href="#/user/ads">Waiting Approval</a></li>
+        <li><a href="#/user/ads">Inactive</a></li>
+        <li><a href="#/user/ads">Rejected</a></li>        
+    </ul>
+</div>
+
+<!-- Navigation box for logged in admins -->
+<div ng-if="authService.isAdmin()" class="box">
+    <h2>Navigation</h2>
+    <ul class="sidebar-menu">
+        <li><a href="#/admin/ads">Ads</a></li>
+        <li><a href="#/admin/users">Users</a></li>
+        <li><a href="#/admin/categories">Categories</a></li>
+        <li><a href="#/admin/towns">Towns</a></li>
+        <li><a ng-click="logout()">Logout</a></li>
+    </ul>
+</div>
+
+<div ng-if="authService.isAdmin()" class="box">
+    <h2>Ads</h2>
     <ul class="sidebar-menu">
         <li><a href="#/user/ads">All</a></li>
         <li><a href="#/user/ads">Published</a></li>
@@ -39,17 +60,5 @@
         <li><a href="#/user/ads">Inactive</a></li>
         <li><a href="#/user/ads">Rejected</a></li>
         
-    </ul>
-</div>
-
-<!-- Navigation box for logged in admins -->
-<div ng-if="authService.isAdmin()" class="box">
-    <h2>Administrator</h2>
-    <ul class="sidebar-menu">
-        <li><a href="#/admin/ads">Ads</a></li>
-        <li><a href="#/admin/users">Users</a></li>
-        <li><a href="#/admin/categories">Categories</a></li>
-        <li><a href="#/admin/towns">Towns</a></li>
-        <li><a ng-click="logout()">Logout</a></li>
     </ul>
 </div>
